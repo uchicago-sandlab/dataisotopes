@@ -1,0 +1,18 @@
+  dataset: 
+    name: 'scrub'
+    num_classes: 530
+    ffcv: False
+    tr_folder: 
+      hostname: ''
+    ts_folder:
+      hostname: ''
+
+  model:
+    name: 'resnet50'
+    loss: 'focal'
+    epochs: 16
+    optimizer: 'adam'
+    scheduler: 'cyclic'
+    lr: 0.001
+    batch_size: 128
+    warmup: 0

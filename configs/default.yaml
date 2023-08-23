@@ -1,0 +1,11 @@
+imagenet_path: '/bigstor/rbhattacharjee1/ilsvrc_blurred/val/' # replace this with your own Imagenet validation data path
+repeat: 1
+num_boost_steps: 5
+num_test: 250
+num_external: 5
+external: True
+same_class: False
+counter: 'none'
+counter_blend_perc: [0.0]
+counter_noise_std: [1.0]
+counter_compress_ratio: [100]

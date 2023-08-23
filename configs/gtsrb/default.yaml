@@ -1,0 +1,18 @@
+dataset: 
+  name: 'gtsrb'
+  num_classes: 43
+  ffcv: False
+  tr_folder: 
+    hostname: None
+  ts_folder:
+    hostname: None
+  
+model: 
+  name: 'simple'
+  lr: 1e-4
+  scheduler: 'cosine'
+  optimizer: 'adam'
+  epochs: 20
+  batch_size: 512
+  warmup: 0
+  loss: 'xentropy'

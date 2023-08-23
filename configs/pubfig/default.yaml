@@ -1,0 +1,24 @@
+  dataset: 
+    name: 'pubfig'
+    num_classes: 65
+    ffcv: False
+    tr_folder: 
+      fred: None
+      george: None
+      nebula: None
+    ts_folder:
+      fred: None
+      george: None
+      nebula: None
+
+  model:
+    name: 'sphereface'
+    loss: 'angle'
+    epochs: 25
+    optimizer: 'adam'
+    scheduler: 'none'
+    lr: 0.001
+    batch_size: 128
+    num_unfreeze: 3
+    warmup: 0
+ 
