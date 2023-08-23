@@ -1,0 +1,9 @@
+repeat: 1
+tag: ['imagenet_blend']
+alpha: [0.4]
+tag_class_count: [1]
+perc_tagged: [0.1]
+xp_file: 'cifar100_sanity_check'
+
+model: 
+  epochs: 2

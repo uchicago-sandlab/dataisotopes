@@ -1,0 +1,20 @@
+dataset: 
+  name: 'cifar100'
+  num_classes: 100
+  ffcv: True
+  tr_folder: 
+    fred: None
+    george: None
+  ts_folder:
+    fred: None
+    george: None
+  
+model: 
+  name: 'resnet18'
+  lr: 0.5
+  scheduler: 'step'
+  optimizer: 'sgd'
+  epochs: 72
+  batch_size: 512
+  warmup: 0
+  loss: 'xentropy'
