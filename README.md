@@ -65,3 +65,6 @@ If you want to reproduce the key evaluation experiments from Sections 5.2 and 5.
 | Table 3 | GTSRB, CIFAR100, PubFig, Scrub  | ```./configs/<DATASET>/multi/default.yaml``` | 
 
 
+## License
+
+All code in this repository is licensed under the MIT license. 
