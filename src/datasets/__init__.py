@@ -217,7 +217,7 @@ def prep_fccv(dataset, train, test, params):
     from ffcv.writer import DatasetWriter
     import sys
     sys.path.append('./')
-    from .ffcv_tagger import Tag # EJW custom tag for ImageNet
+    from .ffcv_tagger import Tag # custom tag for ImageNet
 
     if (not os.path.exists(f'/tmp/{dataset}_train.beton')) or (not os.path.exists(f'/tmp/{dataset}_test.beton')):
         #Don't need to run this every time. 
@@ -237,7 +237,6 @@ def prep_fccv(dataset, train, test, params):
         image_pipeline: List[Operation] = [SimpleRGBImageDecoder()]
 
         # Add image transforms and normalization
-        # TODO will need to update here with parameterized transformations for other datasets. 
         if (params.dataset) == 'cifar10' or (params.dataset=='cifar100'):
             if params.dataset == 'cifar10':
                 CIFAR_MEAN = [125.307, 122.961, 113.8575]
@@ -254,7 +253,6 @@ def prep_fccv(dataset, train, test, params):
                 if params.defense == 'none':
                     image_pipeline.extend([
                             Tag(tag, alpha, tag_img_indices, tag_class_indices),
-                            #Poison(tag, alpha, tag_img_indices, tag_class_indices),
                         ])
                 elif params.defense == 'tag':
                     defense_alpha = (train.tagger.defense_mask * train.tagger.defense_alpha)[:,:,0]

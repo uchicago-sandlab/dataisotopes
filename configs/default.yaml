@@ -1,4 +1,4 @@
-imagenet_path: '/bigstor/rbhattacharjee1/ilsvrc_blurred/val/' # replace this with your own Imagenet validation data path
+imagenet_path: '/path/to/Imagenet/validation/data/' # replace this with your own Imagenet validation data path (see ``Isotope Marks'' section of README)
 repeat: 1
 num_boost_steps: 5
 num_test: 250

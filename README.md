@@ -7,7 +7,7 @@ Code to accompany: "Data Isotopes for Data Provenance in DNNs".
 
 This repository uses a conda environment. To set it up (assuming `conda` is installed):
 ```
-$ conda env create -f environment.yml
+$ conda env create --name=venv --file=environment.yml
 $ conda activate venv
 ```
 Our code uses the [ffcv](https://github.com/libffcv/ffcv) library to train CIFAR100 models, so you will have to ensure your system is compatible with that library. 

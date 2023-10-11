@@ -212,7 +212,7 @@ def ResNet50(num_classes):
 ### HEADS for FR
 
 
-# Support: ['Softmax', 'ArcFace', 'CosFace', 'SphereFace', 'Am_softmax']
+# Support: ['Softmax', 'ArcFace', 'CosFace', 'Sphereace', 'Am_softmax']
 # Support: ['AdaCos','AdaM_Softmax','ArcFace','ArcNegFace','CircleLoss','CurricularFace','MagFace','NPCFace','MV_Softmax','SST_Prototype']
 class Softmax(nn.Module):
     r"""Implement of Softmax (normal classification head):

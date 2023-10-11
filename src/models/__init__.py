@@ -2,6 +2,7 @@ from .archs import *
 import torchvision
 import torch
 import torch.nn
+import os
 from torch.autograd import Variable
 
 
@@ -18,8 +19,10 @@ def build_model(params):
     elif params.model == 'resnet50':
         model = ResNet50(num_classes=n_classes[params.dataset])
     elif params.model == 'sphereface':
-        import net_sphere
-        model = getattr(net_sphere,'sphere20a')() 
+        from .net_sphere import sphere20a
+        model = sphere20a()
+        if not os.path.exists('./sphere20a_20171020.pth'):
+            assert False == True, 'Please download SphereFace checkpoint and place in /src/models/ - see README for details'
         model.load_state_dict(torch.load('./sphere20a_20171020.pth'))
         new_angle = net_sphere.AngleLinear(512, n_classes[params.dataset]) # 65 classes in pubfig    
         model.fc6 = new_angle
